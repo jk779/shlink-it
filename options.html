@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="fs-3">Shlink It! Settings</h1>
+      <hr />
+      <form>
+        <div class="mb-3">
+          <label for="shlinkUrl" class="form-label">Shlink URL</label>
+          <input
+            type="text"
+            class="form-control"
+            id="shlinkUrl"
+            placeholder="Shlink Server URL"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="apiKey" class="form-label">API Key</label>
+          <input
+            type="text"
+            class="form-control"
+            id="apiKey"
+            placeholder="API Key (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="defaultTags" class="form-label">Default Tags</label>
+          <input
+            type="text"
+            class="form-control"
+            id="defaultTags"
+            placeholder="Default tags to add (space separted)"
+          />
+        </div>
+        <button type="submit" id="submitBtn" class="btn btn-primary">
+          Save
+        </button>
+      </form>
+    </div>
+  </body>
+  <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
+  <script src="./vendor/browser-polyfill/browser-polyfill.min.js"></script>
+  <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="options.js"></script>
+</html>
