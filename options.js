@@ -3,6 +3,7 @@
 $(document).ready(() => {
   const shlinkUrl = $("#shlinkUrl");
   const apiKey = $("#apiKey");
+  const domain = $("#domain");
   const defaultTags = $("#defaultTags");
 
   const handleButtonClick = (evt) => {
@@ -11,6 +12,7 @@ $(document).ready(() => {
     browser.storage.local.set({
       shlinkUrl: shlinkUrl.val(),
       apiKey: apiKey.val(),
+      domain: domain.val(),
       defaultTags: defaultTags.val(),
     });
   };
@@ -19,7 +21,9 @@ $(document).ready(() => {
     console.debug(data);
     shlinkUrl.val(data.shlinkUrl || "");
     apiKey.val(data.apiKey || "");
+    domain.val(data.domain || "");
     defaultTags.val(data.defaultTags || "");
+    shlinkDomainToDisplay.val(data.shlinkDomainToDisplay || "");
   });
 
   $("#submitBtn").on("click", handleButtonClick);

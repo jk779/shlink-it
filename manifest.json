@@ -1,7 +1,7 @@
 {
   "name": "Shlink It!",
   "description": "Use your self-hosted Shlink server to create a shortcut to the current URL.",
-  "version": "0.1",
+  "version": "0.1.1",
   "manifest_version": 3,
   "permissions": ["storage", "activeTab", "notifications", "clipboardWrite"],
   "action": {

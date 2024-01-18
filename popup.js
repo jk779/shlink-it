@@ -46,6 +46,7 @@ $(document).ready(() => {
       const options = {
         longUrl: url,
         findIfExists: true,
+        domain: data.domain,
         title,
         tags,
         customSlug,
@@ -151,6 +152,10 @@ $(document).ready(() => {
         $("#saveUrl").val(saveUrl);
         $("#saveTitle").val(saveTitle);
       });
+
+    // Shlink falls back to the default domain if the domain parameter is empty. To display on which domain the short
+    // URL is going to be created, we need to figure this out here as well, depending on the domain parameter value.
+    $("#shlinkDomainToDisplay").text(data.domain.trim() === "" ? data.shlinkUrl : data.domain);
 
     $("#shlinkUrl").text(data.shlinkUrl);
     $("#saveTags").val(data.defaultTags + " ");
